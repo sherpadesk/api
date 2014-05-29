@@ -1,0 +1,1671 @@
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+*{
+  margin: 0;
+  font-weight: 300;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important; 
+  -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important; 
+  outline: none !important;
+  -webkit-box-sizing:border-box;
+    -moz-bos-sizing:border-box;
+    box-sizing:border-box;
+}
+
+a {
+  text-decoration: none;
+  color:inherit;
+}
+
+body {
+  background: url("../img/bg_dark.png");
+  /*padding-top: 80px*/;
+  /*background-size: cover;*/
+  background-repeat: no-repeat;
+}
+
+body, html {
+/*  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;*/
+  height: 100%;
+  margin-left: -3px;
+}
+
+strong {
+  font-size: 20px;
+  font-weight: 650;
+}
+
+.backIcon {
+  top: 0; right: 0; bottom: 0; left: 0;
+  height: 25px;
+  margin: auto 0;
+  position: absolute;
+}
+
+.blueButton {
+  background: #0099CC;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  height: 45px;
+  margin-bottom: 15px;
+  width: 100%;  
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.dark {
+  background: url("../img/bg_dark.png");
+  /*background-size: cover; */
+}
+
+.send {
+  background: #4bb24d;
+  border: none;
+  color: #ffffff;
+  display: block;
+  font-size: 14px;
+  height: 45px;
+  margin-bottom: 15px;
+  text-align: center;
+  line-height: 45px;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.feedClock {
+  height: 12px;
+  display: inline;
+  margin-right: 7px;
+}
+
+.feedName {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.feedTime {
+  color: #ffffff;
+  display: inline;
+  font-size: 12px;
+}
+
+.plusIconHeader {
+  height: 23px;
+  margin-top: 12px;
+  float: right;
+}
+
+.textInput {
+  background: rgba(0, 0, 0, .4);
+  box-sizing:border-box;
+    -moz-box-sizing:border-box;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  height: 140px;
+  padding: 10px;
+  width: 100%;
+}
+
+.textInputSmall {
+  background: rgba(0, 0, 0, .4);
+  box-sizing:border-box;
+    -moz-box-sizing:border-box;
+  border: none;
+  overflow: hidden;
+  color: #ffffff;
+  font-size: 16px;
+  height: 40px;
+  padding: 10px;
+  width: 100%;
+}
+
+.greenButton {
+  background: #4bb24d;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  height: 45px;
+  margin: 15px 0 20px 0;
+  width: 100%;
+}
+
+.styledSelect select {
+   background: transparent;
+   color: #ffffff;
+   width: 100%;
+   font-size: 16px;
+   line-height: 1;
+   border: none;
+   height: 45px;
+   padding: 0 20px;
+   -webkit-appearance: none;
+}
+
+.styledSelect {
+   width: 100%;
+   height: 45px;
+   margin-bottom: 15px;
+   overflow: hidden;
+   background: url("../img/select_arrow.png") no-repeat #489CD6;
+   background-position: top 18px right 18px;
+}
+
+.smallHeader {
+  color: #ffffff;
+  font-size: 18px;
+  margin: 20px 0 5px 0;
+}
+
+/* SideNav
+   ========================================================================== */
+
+.bodyContent {
+  margin-top: 45px;
+}
+
+.bodyLock {
+  overflow-x: hidden; 
+  overflow-y: hidden;
+}
+
+.bodyContentCover {
+  z-index: 2;
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+header, .bodyContent {
+  -webkit-transition: -webkit-transform .2s ease-in; /* Changed here */ 
+     -moz-transition: -moz-transform .2s ease-in;
+       -o-transition: -o-transform .2s ease-in;
+          transition: transform .2s ease-in;  
+}
+
+
+.sideNav {
+  background-color: #1C1B22;
+  height: 131%;
+  position: absolute;
+  top: 0; left: 0;
+  width: 60%;
+  z-index: 3;
+  overflow-y:hidden; 
+  transform:translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  -webkit-transition: -webkit-transform .2s ease-in; /* Changed here */ 
+     -moz-transition: -moz-transform .2s ease-in;
+       -o-transition: -o-transform .2s ease-in;
+          transition: transform .2s ease-in;
+}
+
+.sideNavOut {
+  transform:translateX(0%);
+  -webkit-transform: translateX(0%);
+  -webkit-transform: translateX(0%);
+  -webkit-transition: -webkit-transform .2s ease-in; /* Changed here */ 
+     -moz-transition: -moz-transform .2s ease-in;
+       -o-transition: -o-transform .2s ease-in;
+          transition: transform .2s ease-in;
+}
+
+.sideNavLinks {
+  background: #161619;
+  list-style-type: none;
+  margin-top: 14%;
+  width: 100%;
+}
+
+.sideNavLinks li {
+  color: #ffffff;
+  font-size: 14px;
+  height: 50px;
+  padding: 0 30px;
+}
+
+.sideNavLinks li span {
+  line-height: 50px;
+  vertical-align: middle;
+  float: left;
+  margin-left: 10px;
+}
+
+.sideNavCircle {
+  background: none;
+  border: 1px solid #25B0E6;
+  box-sizing:border-box;
+    -moz-box-sizing:border-box;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  float: left;
+  height: 12px;
+  width: 12px;
+  margin-top: 18px;
+}
+
+.navName {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+}
+
+.navProfile {
+  display: block;
+  margin: 14% auto 0 auto;
+}
+
+/* Header
+   ========================================================================== */
+
+.bottomHeader {
+  background: #0099CC;
+  height: 40px;
+  list-style-type: none;
+  width: 100%;
+  z-index: -3;
+  opacity: .9;
+}
+
+.bottomHeaderContainer {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.bottomHeader li {
+  color: #ffffff;
+  float: left;
+  font-size: 14px;
+  width: 28%;
+  text-align: center;
+  line-height: 35px;
+  vertical-align: middle;
+}
+
+.bottomHeader li:nth-child(2) {
+  width: 8.5%;
+}
+
+.bottomHeader li:nth-child(4) {
+  width: 5.5%;
+}
+
+
+header {
+  background: #25B0E6;
+  overflow: hidden;
+  height: 45px;
+  position: fixed;
+  width: 102%;
+  top: 0;
+  z-index: 2;
+}
+
+.headerContainer {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.headerNavIcon {
+  margin-top: 15px;
+  height: 16px;
+}
+
+.topHeader {
+  list-style-type: none;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.topHeader span {
+  font-size: 25px;
+  color: #ffffff;
+}
+
+.topHeader li {
+  float: left;
+  height: 45px;
+  width: 60%;
+  position: relative;
+}
+
+.topHeader li:first-child {
+  width: 20%;
+}
+
+.topHeader li:last-child {
+  width: 20%;
+}
+
+.SherpaDesk {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 45px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.headerSearch {
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  box-sizing:border-box;
+    -moz-box-sizing:border-box;
+  color: #ffffff;
+  height: 30px;
+  float: left;
+  padding: 0 5px 0 5px;
+  width: 70%;
+}
+
+.headerSearchContainer {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  box-sizing:border-box;
+    -moz-box-sizing:border-box;
+  height: 30px;
+  margin-top: 7px;
+  float: right;
+  background: #0099CC;
+  width: 0px;
+}
+
+.headerSearchIcon {
+  height: 23px;
+  margin-top: 10px;
+  float: right;
+}
+
+.searchIconExpanded {
+  height: 23px;
+  margin: 4px 0 0 6px;
+  float: left;
+}
+
+.searchCloseExpanded {
+  float: left;
+  margin-top: -2px;
+  padding-left: 10px;
+}
+
+/* Dashboard
+   ========================================================================== */
+
+.dashboard {
+  background: rgba(0,0,0, .4);
+  height: 200px;
+  position: relative;
+  width: 100%;
+}
+
+.dashboardContainer {
+  height: 150px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-top: 15px;
+  width: 100%;
+}
+
+.dashboardLeft, .dashboardRight {
+  float: left;
+  height: 100%;
+  margin-bottom: 10px;
+  width: 50%;
+}
+
+.dashboardLeft {
+  box-sizing:border-box;
+    -moz-box-sizing:border-box;
+  border-right: 1px solid rgba(255, 255, 3255, .4);
+}
+
+.mainStat {
+  color: #ffffff;
+  font-size: 84px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.mainStatTitle {
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+}
+
+.navCircle {
+  background: none;
+  border: 1px solid #ffffff;
+  box-sizing:border-box;
+    -moz-box-sizing:border-box;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  float: left;
+  height: 10px;
+  margin: 0 5px;
+  width: 10px;
+}
+
+.sideStats {
+  list-style-type: none;
+  height: 100%;
+  width: 109%;
+}
+
+.sideStats img {
+  width: 10px;
+  height: 10px;
+}
+.sideStats li {
+  box-sizing:border-box;
+    -moz-box-sizing:border-box;
+  padding: 0 15px;
+  width: 80%;
+}
+
+
+.sideStatsLeft, .sideStatsRight {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 50px;
+  vertical-align: middle;
+}
+
+.sideStatsLeft {
+  float: left;
+  font-size: 20px;
+}
+
+.sideStatsRight {
+  float: right;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+#tabContainer {
+  height: 100%;
+  width: 100%;
+}
+
+.tabs {
+  height: 35px;
+  margin-bottom: 4px;
+  margin: 0 auto;
+  width: 100%;
+  background-color: #0099CC;
+}
+
+.tabs ul {
+  font-size: 15px;
+  list-style: none;
+}
+
+.tabs > ul > li {
+  width: 32%;
+  text-align: center;
+  line-height: 35px;
+  height: 35px;
+  display: block;
+  float: left;
+  color: #ffffff;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none; 
+  background: #0099CC; /* old browsers */
+}
+
+.tabs ul li:nth-child(2) {
+  width: 5.5px;
+}
+
+.tabs ul li:nth-child(4) {
+  width: 5.5px;
+}
+
+.tabs li:last-child {
+  height: 20px;
+}
+
+.tabActiveHeader {
+  border-bottom: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.currentPage {
+  width: 
+}
+
+.searchIcon {
+  height: 20px;
+  margin-top:5px;
+  }
+
+.ticketsContainer {
+  overflow: scroll;
+  margin: 0 auto;
+  height: 448px;
+  width: 90%;
+}
+
+.AccountDetailsTicketsContainer {
+  overflow: auto;
+  margin: 0 auto;
+  border-top: 1px solid #cccccc;
+}
+
+/* Feed
+   ========================================================================== */
+
+.feed {
+  width: 100%;
+}
+
+
+.feedContainer {
+  margin: 15px auto 0 auto;
+  width: 90%;
+}   
+
+.feedTime span {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.taskDescription {
+  color: #ffffff;
+  font-size: 12px;
+}
+/* account
+   ========================================================================== */
+
+.accountWrapper {
+  margin: 0px auto;
+  max-width: 80%;
+  padding: 0 5%;
+}
+
+.buttonList li {
+  float: left;
+  width: 30%;
+  margin: 0%;
+}
+
+.button {
+  background-color: #25B0E6;
+  color: #ffffff;
+  font-size: 30px;
+  width: 85%;
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  padding-bottom: 10%;
+  margin: 20%;
+
+}
+
+.styled-select select {
+   background: #25B0E6;
+   width: 105%;
+   padding: 5px;
+   font-size: 16px;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   height: 40px;
+   -webkit-appearance: none;
+   color: #ffffff;
+
+   }
+
+   .styled-select {
+   width: 83.5%;
+   height: 40px;
+   overflow: hidden;
+   margin-left: 8%;
+   }
+
+   .textArea {
+    margin-left: 8%;
+    width: 83.5%;
+    height: 120px;
+    background: #000000;
+    opacity: 0.5;
+    resize: none;
+    border: none;
+   }
+
+  
+
+/* Invoice
+   ========================================================================== */
+
+.detail1 {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: left !important;
+  width: 40%;
+}
+
+.detail2 {
+  font-size: 16px;
+  width: 20%;
+}
+
+.detail3 {
+  font-size: 16px;
+  width: 25%;
+}
+
+.detail3Small {
+  font-size: 10px;
+  margin-left: 2px;
+  vertical-align: top;
+}
+
+.detail4 {
+  font-size: 16px;
+  text-align: right;
+  width: 15%;
+}
+
+.detail1Short {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: left !important;
+  width: 60%;
+}
+
+.detail2Short {
+  font-size: 16px;
+  width: 25%;
+}
+
+.detail3Short {
+  font-size: 16px;
+  width: 15%;
+}
+
+.plusIcon {
+  height: 25px;
+}
+
+.invoiceAccount {
+  border-bottom: 1px solid #ffffff;
+  color: #ffffff;
+  list-style-type: none;
+  margin-top: 35px;
+  overflow: auto;
+}
+
+.invoiceAccount li:first-child {
+  float: left;
+  font-size: 18px;
+}
+
+.invoiceAccount li:last-child {
+  float: right;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.invoiceContainer {
+  overflow: auto;
+  margin: 0 auto;
+  height: 545px;
+  width: 90%;
+}
+
+.invoiceDetail {
+  list-style-type: none;
+}
+
+.invoiceDetail li {
+  color: #ffffff;
+  float: left;
+  text-align: right;
+}
+
+.invoiceInfo {
+  list-style-type: none;
+  margin-top: 15px;
+}
+
+.invoiceInfo li {
+  overflow: auto;
+  margin-bottom: 2px;
+}
+
+.invoiceTotal {
+  color: #ffffff;
+  font-size: 18px;
+  text-align: right;
+  width: 85%;
+}
+
+.invoiceTotalHr {
+  margin-top: -5px;
+  float: right;
+  width: 30%;
+}
+
+.recipient {
+  background: rgba(0, 0, 0, .4);
+  box-sizing:border-box;
+    -moz-box-sizing:border-box;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  height: 40px;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.recipient p {
+  float: left;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 40px;
+  overflow: hidden;
+  vertical-align: middle;
+  width: 80%;
+}
+
+.recipient img {
+  height: 25px;
+  margin-top: 6px;
+  margin-left: 5px;
+  float: right;
+}
+
+.recipientDetail {
+  list-style-type: none;
+}
+
+.recipientDetail li {
+  float: left;
+}
+
+.recipientDetail li:first-child {
+  width: 15%;
+}
+
+.recipientDetail li:last-child {
+  width: 85%;
+}
+
+.recipientDetail > li > img {
+  height: 40px;
+}
+
+/* Timelog 
+   ========================================================================== */
+
+.timelogContainer {
+  overflow: auto;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.timelogs {
+  padding-top: 35px;
+  list-style-type: none;
+}
+ 
+.timelogs > li {
+  margin-bottom: 15px;
+  float: left;
+  height: 50px;
+  width: 100%;
+}
+
+.timelog {
+  list-style-type: none;
+}
+
+.timelog li {
+  float: left;
+  width: 55%;
+}
+
+.timelog > li:first-child {
+  width: 27%;
+}
+
+.timelog > li:last-child {
+  margin-top: 12px;
+  width: 18%;
+}
+
+.timelogProfile {
+  display: block;
+  height: 50px;
+  margin: 0 auto;
+}
+
+/* account
+   ========================================================================== */
+
+.accountContainer {
+  margin: 0 auto;
+  width: 90%;
+  overflow:auto;
+}
+
+.buttonList {
+  list-style-type: none;
+  margin-top: 35px;
+  width: 100%;
+}
+
+.buttonList li {
+  background: rgba(0, 0, 0, .4);
+  color: #ffffff;
+  float: left;
+  width: 35%;
+  margin: 0 2.5% 15px 2.5%;
+  height: 45px;
+  text-align: center;
+}
+
+.buttonList li:first-child, .buttonList li:last-child{
+  background-color: #489CD6;
+  margin: 0;
+  width: 30%;
+}
+
+.buttonList span {
+  line-height: 45px;
+  vertical-align: middle;
+
+}
+
+.buttonListSymbols {
+  font-weight: 700;
+  font-size: 30px;
+}
+
+/* Footer
+   ========================================================================== */
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  margin: 0 -50%;
+  /* display: block; */
+  width: 100%;
+}
+
+.navIcon {
+  height: 25px;
+}
+
+.navIcons {
+  list-style-type: none;
+}
+
+.navIcons li {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+
+.navTitle {
+  color: #ffffff;
+  font-size: 9px;
+  margin-top: -3px;
+}
+
+/* Tickets
+   ========================================================================== */
+
+.ticketsContainer {
+  overflow: scroll;
+  margin: 0 auto;
+  height: 448px;
+  width: 90%;
+}
+
+/* +tickets
+   ========================================================================== */
+.CreateInvoiceWrapper {
+  width: 90%;
+  margin: 0 auto;
+  overflow: auto;
+  padding-top: 30px;
+}
+
+/* Select Payment 
+   ========================================================================== */
+.selectPaymentButton {
+  background: #489CD6;
+  border: 0;
+  display: block;
+  margin: 0 auto 15px auto;
+  color: #ffffff;
+  height: 45px;
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
+  line-height: 45px;
+}
+
+.buttonNextPayment {
+  background: #57DE57;
+  border: 0;
+  display: block;
+  margin-top: 30px;
+  color: #ffffff;
+  height: 45px;
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
+  line-height: 45px;
+}
+
+/* Account_details
+   ========================================================================== */
+.accountDetailsContainer {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.QueuesTickerContainer {
+  width: 90%;
+  margin: 0 auto 25px;
+  overflow: auto;
+
+}
+
+.OptionsList {
+  list-style-type: none;
+  margin-top: 20px;
+}
+
+
+
+.OptionTitle {
+  color: #ffffff;
+  float: left;
+  line-height: 45px;
+  text-align: center;
+  padding-left: 10px; 
+}
+
+.OptionsListAccountDetail {
+  list-style-type: none;
+  margin-top: 20px;
+  width: 100%;
+}
+.OptionsListAccountDetail > li{
+ margin:0 0 10px 0;
+ height: 45px;
+}
+
+.OptionsList > li{
+ margin:0 0 10px 0;
+ height: 45px;
+}
+
+.OptionWrapper {
+  width: 85%;
+  background-color: #25B0E6;
+  height: 100%;
+  float: left;
+}
+
+.NoticationWrapper {
+  width: 15%;
+  background-color: #0099CC;
+  height: 100%;
+  float: left;
+  color: #ffffff;
+  line-height: 45px;
+  text-align: center;
+}
+
+.NoticationWrapperAccountDetail {
+  width: 15%;
+  background-color: #0099CC;
+  height: 100%;
+  float: left;
+  color: #ffffff;
+  line-height: 45px;
+  text-align: center;
+}
+
+.openTicketTitle {
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
+  margin-top: 35px;
+}
+
+.OptionWrapperAccountDetail {
+  width: 85%;
+  background-color: #25B0E6;
+  height: 100%;
+  float: left;
+}
+/* Account_details
+   ========================================================================== */
+
+.buttonShowClosedTickets {
+  background:#0099CC;
+  border: 0;
+  display: block;
+  margin: 30px auto 15px;
+  color: #ffffff;
+  height: 45px;
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
+  line-height: 45px;
+}
+
+/* Dashboard Redesign
+   ========================================================================== */
+
+.ActiveAccountsContainer {
+  width: 90%;
+  margin-left: 20px;
+  overflow: auto;
+}
+
+.ActiveAccountsList {
+  list-style: none;
+}
+
+.ActiveAccountsList li {
+  overflow: auto;
+}
+
+.ActiveAccountsList li ul {
+  list-style-type: none;
+  color: #ccc;
+  overflow: auto;
+  border-bottom: 1px solid #ccc;
+  margin: 5px auto;
+  padding-bottom: 5px;
+}
+
+.ActiveAccountsList strong {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.ActiveAccountsList li ul li {
+  float: right;
+  width: 33.33%;
+  height: 50%;
+  text-align: center;
+  font-size: 12px;
+}
+
+.ActiveAccountsList li ul li img {
+  width: 9px;
+  height: 9px;
+}
+
+.ActiveAccountsList li ul li:first-child {
+  width: 100%;
+  height: 50%;
+  text-align: left;
+  font-size: 20px;
+  color: #fff;
+}
+.activeAccountTitle {
+  color: white;
+  line-height: 40px;
+  vertical-align: center;
+  margin-left: 10px;
+}
+
+.activeAccountActivity {
+  color: white;
+  line-height: 40px;
+  vertical-align: center;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.activeAccountHeader {
+  list-style-type: none;
+  width: 90%;
+  margin-bottom: -1px;
+}
+
+.activeAccountHeader li {
+  float: left;
+  width: 33.33%;
+  color: #ccc;
+  text-align: right;
+}
+/* Ticket Detials
+   ========================================================================== */
+.ticketDetailsHeader {
+  width: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.ticketDetailsHeader h3 {
+  margin-bottom: 5px;
+}
+.ticketDetailsInfoText {
+  font-size: 13px;
+  color: #ffffff;
+}
+
+.TDSListWrapper {
+  width: 90%;
+  height: 60px;
+  margin: 10px auto;
+  padding-top: 10px;
+  color: #ffffff;
+}
+
+.orginalMessageContainer {
+  width: 90%;
+  overflow: auto;
+  margin: 15px auto 15px;
+}
+
+.orginalMessageContainer h4 {
+  color: #ffffff;
+  font-weight: 600;
+  margin: 10px auto 5px;
+}
+
+.orginalMessageContainer img {
+  float: left;
+  margin: 10px -5px 0;
+}
+
+.TDSListWrapper h3 {
+  text-align: left;
+  float: left;
+  margin-top: 7px;
+  width: 70%;
+}
+
+.shortInfo {
+  width: 30%;
+  list-style: none;
+  float: left;
+}
+
+.shortInfo p {
+  color: #cccccc;
+  font-size: 10px;
+  text-align: right;
+}
+
+
+
+.ticketInqury p {
+  font-size: 14px;
+}
+
+.tabpageContainer {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10px;
+  overflow: auto;
+}
+.slaInfo {
+  color: #ccc;
+  list-style-type: none;
+  font-size: 10px;
+  padding-bottom: 1px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.slaInfo li {
+  float: left;
+  width: 50%;
+}
+
+#tabpage_info, #tabpage_options {
+  display: none;
+}
+
+.replyButton {
+  border: none;
+  width: 40%;
+  height: 35px;
+  background-color: #4bb24d;
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+}
+
+.responseBlock {
+  list-style: none;
+  overflow: auto;
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  z-index: 5;
+}
+
+.responseBlock img {
+  float: left;
+  margin-left: 5px;
+  margin-top: 3px;
+  z-index: 1;
+}
+
+.responseBlock span {
+  float: left;
+  margin-left: 7px;
+  z-index: 2;
+}
+
+.nameNtech {
+  list-style-type: none;
+}
+.responseBlock li {
+  float: left;
+  margin-top: 8px;
+  margin-left: 10px;
+  width: 70%;
+  z-index: 2;
+}
+
+.responseBlock li:first-child {
+  width: 21%;
+  height: 100%;
+  margin-top: 10px;
+  color: #cccccc;
+  font-size: 12px;
+  text-align: center;
+
+}
+
+.responseBlock li:last-child {
+  width: 95%;
+  height: 30%;
+  text-align: right;
+  margin-top: -20px;
+  color: #cccccc;
+  font-size: 10px;
+}
+
+.responseText {
+  color: #ffffff;
+  width: 70%;
+  height: 90%;
+  z-index: 2;
+}
+
+.latestResponse {
+  border-bottom: 0px solid transparent;
+}
+
+.blockNumber {
+  margin-left: 0px;
+}
+
+.responseText h3 {
+  font-size: 18px;
+}
+
+.responseBlock p {
+  font-size: 14px;
+  margin-left: 0px;
+  width: 100%;
+}
+
+.responseImg {
+  width: 60px;
+  height: 60px;
+}
+
+/* update css */
+
+.TicketBlockFace {
+  width: 50px;
+  height: 50px;
+}
+
+.TicketBlockNumber {
+  font-size: 10px;
+}
+
+.user {
+  color: #ffffff;
+  margin-top: 35px;
+}
+
+.updateButton {
+  border: none;
+  width: 100%;
+  height: 45px;
+  background-color: #4bb24d;
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+  display: block;
+  margin: 25px auto;
+}
+.responseBlock h4 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.responseBlock p {
+  font-size: 14px;
+}
+
+
+/* DashBoard Slider css */
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+}
+.first-slide {
+
+}
+
+.second-slide {
+   
+}
+.second-slide ul {
+  list-style-type: none;
+  margin-left: 10%;
+}
+
+.second-slide li {
+  float: left;
+  width: 50%; 
+  margin: 5px auto 5px;
+}
+
+.second-slide li span {
+  margin: -18px 0 0 22px;
+  float: left;
+  font-size: 14px;
+}
+.graphKeyRed {
+  height: 15px;
+  width: 15px;
+  background-color:rgba(37,176,230,0.5);
+  border: 1px solid rgba(220,220,220,1);
+}
+
+.graphKeyBlue {
+  height: 15px;
+  width: 15px;
+  background-color:rgba(35,225,35,0.5);
+  border: 1px solid rgba(151,187,205,1);
+}
+
+#bar {
+  width: 100%;
+  height: 100%;
+  color: #ffffff !important;
+}
+.third-slide {
+ color: #ffffff !important;
+}
+
+.third-slide ul {
+  list-style-type: none;
+  margin-left: 10%;
+}
+
+.third-slide li {
+  float: left;
+  width: 50%; 
+  margin: 5px auto -15px;
+}
+
+.third-slide li span {
+  margin: -18px 0 0 22px;
+  float: left;
+  font-size: 14px;
+}
+
+#line {
+  margin-top: 23px;
+  margin-left: -20px;
+  color: #ffffff !important;
+}
+
+.pagination {
+  position: absolute;
+  z-index: 20;
+  left: 45%;
+  bottom: 10px;
+}
+.swiper-pagination-switch {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: #222;
+  margin-right: 5px;
+  opacity: 0.8;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.swiper-visible-switch {
+  background: #aaa;
+}
+.swiper-active-switch {
+  background: #fff;
+}
+
+.textInputContainer {
+  width: 90%;
+  margin: 0 auto
+}
+
+/* Add Tickets Update  */
+
+.detailedOption {
+  display: none;
+}
+
+.selectionGroup {
+  border-bottom: 1px solid #ccc;
+  width: 30%;
+  height: 5px;
+  margin-bottom: 10px;
+  display: none;
+}
+
+ .detailsArrowDown {
+  color: #ccc;
+  opacity: 0.5;
+  text-align: center;
+ }
+
+ .detailsArrowUp {
+  color: #ccc;
+  opacity: 0.5;
+  text-align: center;
+ }
+
+.tester {
+  margin: 0 auto;
+  width: 40px;
+}
+
+.upArrow {
+  display: none;
+}
+
+/* Invoice List  */
+
+.tableHeader {
+  list-style-type: none;
+  color: #ccc;
+  opacity: .7;
+  width: 100%;
+  overflow: auto;
+}
+
+.tableHeader li {
+  float: left;
+  width: 25%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.tableHeader li:last-child {
+
+}
+
+.tableRows li:first-child {
+  text-align: left;
+}
+
+.tableRows {
+  list-style-type: none;
+  color: #fff;
+  width: 100%;
+  overflow: auto;
+}
+
+.tableRows li {
+  float: left;
+  width: 25%;
+  height: 40px;
+  text-align: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.tableRows li:last-child {
+  text-align: center;
+  
+}
+
+.tableRows li:first-child {
+  text-align: left;
+}
+
+.billable {
+  width: 25px;
+  height: 25px;
+  background-color:transparent;
+  border-radius: 100%;
+  border: 2px solid rgba(189, 195, 199,.5);
+  margin-bottom: 10px;
+  float: left;
+}
+
+  .billTag {
+    color: #ccc;
+    float: left;
+    display: block;
+    margin-left: 7px;
+    font-size: 14px;
+    margin-top: 3px;
+  }
+
+  .innerCircle {
+    width: 15px;
+  height: 15px;
+  background-color:rgba(189, 195, 199,.5);
+  border-radius: 100%;
+  margin: 3px auto;
+  }
+
+  .billFill {
+  background-color: #25B0E6;
+  
+}
+
+/* Ticket List update   */
+
+.TicketTabs ul {
+  font-size: 15px;
+  list-style: none;
+}
+
+.TicketTabs > ul > li {
+  width: 18%;
+  text-align: center;
+  line-height: 35px;
+  height: 35px;
+  display: block;
+  float: left;
+  color: #ffffff;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none; 
+  background: #0099CC; /* old browsers */
+}
+
+.TicketTabs ul li:nth-child(2) {
+  width: 2%;
+}
+
+.TicketTabs ul li:nth-child(4) {
+  width: 2%;
+}
+
+.TicketTabs ul li:nth-child(6) {
+  width: 2%;
+}
+
+.TicketTabs li:last-child {
+  width: 40%;
+  text-align: center;
+}
+
+/* Queues page */
+
+.QueuesContainer {
+  width: 90%;
+  overflow: auto;
+  margin: 0 auto;
+}
+
+.QueuesContainer ul {
+  margin-top: 70px;
+}
+
+
+

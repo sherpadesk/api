@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" href="img/icon.png"/>
+    <link rel="apple-touch-startup-image" href="img/profile_2.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>    
+    <title>SherpaDesk</title>
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/idangerous.swiper.css">
+    <!-- Media query for tablets -->
+    <link rel="stylesheet" href="css/tablet.css" />
+    <!-- Media query for large Screen -->
+    <link rel="stylesheet" href="css/style_LargeScreen.css" />
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <!-- Jquery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Jquery UI -->
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <!-- Main.js -->
+    <script src="js/index.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/Chart.js"></script>
+  </head>
+  <div class="maxSize">
+  <header class="test">
+    <ul class="topHeader">
+      <li><img class="headerNavIcon " src="img/navicon.png"></li>
+      <li><h1 class="SherpaDesk">SherpaDesk</h1></li>
+      <!-- <li><input class="headerSearch"></li> -->
+      <li><img class="headerSearchIcon" src="img/search_icon.png"></li>
+    </ul>
+    <div>
+    
+  </header>
+  <body>
+    <nav class="sideNav">
+      <img class="navProfile" src="img/profile_3.png">
+      <h2 class="navName">Jason Marrow</h2>
+      <ul class="sideNavLinks">
+        <a href="index.html"><li><div class="sideNavCircle"></div><span>Home</span></li></a>
+        <a href="timelog.html"><li><div class="sideNavCircle"></div><span>Timelogs</span></li></a>
+        <a href="Account_List.html"><li><div class="sideNavCircle"></div><span>Accounts</span></li></a>
+        <a href="ticket_list.html"><li><div class="sideNavCircle"></div><span>Tickets</span></li></a>
+        <a href="invoice_List.html"><li><div class="sideNavCircle"></div><span>Invoices</span></li></a>
+        <a href="Queues.html"><li><div class="sideNavCircle"></div><span>Queues</span></li></a>
+      </ul>
+    </nav>
+    <div class="bodyContentCover">
+    <div class="bodyContent">
+      <section class="dashboard clearfix">
+        <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide first-slide">
+        <div class="dashboardContainer">
+          <div class="dashboardLeft">
+            <a href="ticket_list.html"><h1 class="mainStat">30</h1></a>
+            <h2 class="mainStatTitle">All Tickets</h2>
+          </div>
+          <div class="dashboardRight">
+            <ul class="sideStats">
+              <a href="ticket_List.html">
+              <li>
+                <span class="sideStatsLeft">As User</span>
+                <span class="sideStatsRight" id="UserStat">7</span>
+              </li>
+              </a>
+              <a href="ticket_List.html">
+              <li>
+                <span class="sideStatsLeft">As Tech</span>
+                <span class="sideStatsRight" id="TechStat">3</span>
+              </li>
+              </a>
+              <a href="ticket_List.html">
+              <li>
+                <span class="sideStatsLeft">Alt Tech</span>
+                <span class="sideStatsRight" id="altStat">5</span>
+              </li>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide second-slide">
+        <ul>
+          <li>
+            <div class="graphKeyBlue"></div>
+            <span>Personal ATT</span>
+          </li>
+          <li>
+            <div class="graphKeyRed"></div>
+            <span>Company ATT</span>
+          </li>
+        </ul>
+        <canvas id="bar" ></canvas>
+        <script>var barChartData = {
+      labels : ["90 days","60 days","30 days",],
+      datasets : [
+        {
+          fillColor : "rgba(37,176,230,0.5)",
+          strokeColor : "rgba(220,220,220,1)",
+          data : [65,59,80]
+        },
+        {
+          fillColor : "rgba(35,225,35,0.5)",
+          strokeColor : "rgba(151,187,205,1)",
+          data : [55,48,70]
+        }
+      ]
+      
+    }
+
+  var myLine = new Chart(document.getElementById("bar").getContext("2d")).Bar(barChartData);</script>
+      </div>
+      <div class="swiper-slide third-slide">
+        <ul>
+          <li>
+            <div class="graphKeyBlue"></div>
+            <span>Open Tickets</span>
+          </li>
+          <li>
+            <div class="graphKeyRed"></div>
+            <span>Closed Tickets</span>
+          </li>
+        </ul>
+        <canvas id="line"></canvas>
+
+
+  <script> var lineChartData = {
+      labels : ["5 days","10","15","20","25","30"],
+      datasets : [
+        {
+          fillColor : "rgba(37,176,230,0.5)",
+          strokeColor : "rgba(220,220,220,1)",
+          pointColor : "rgba(220,220,220,1)",
+          pointStrokeColor : "#fff",
+          data : [12,5,11,9,14,12,8]
+        },
+        {
+          fillColor : "rgba(35,225,35,0.5)",
+          strokeColor : "rgba(151,187,205,1)",
+          pointColor : "rgba(151,187,205,1)",
+          pointStrokeColor : "#fff",
+          data : [10,6,11,7,13,12,9]
+        }
+      ]
+      
+    }
+
+  var myLine = new Chart(document.getElementById("line").getContext("2d")).Line(lineChartData);</script>
+      </div>
+    </div>
+    <div class="pagination"></div>
+  </div>
+  <script src="js/jquery-1.10.1.min.js"></script>
+  <script src="js/idangerous.swiper-2.1.min.js"></script>
+  <script>var mySwiper = new Swiper('.swiper-container',{
+    pagination: '.pagination',
+    paginationClickable: true
+  })</script>
+        </div>
+      </section>
+      <div class="QueuesTickerContainer"> 
+      <ul class="OptionsList" id="DashBoradQueues">
+        <li>
+          <a href="ticket_list.html">
+          <div class="OptionWrapper"><h3 class="OptionTitle">New Ticket</h3></div>
+          <div class="NoticationWrapper"><h2>12</h2></div>
+          </a>
+        </li>
+        <li>
+          <div class="OptionWrapper"><h3 class="OptionTitle">Pre Development</h3></div>
+          <div class="NoticationWrapper"><h2>2</h2></div>
+        </li>
+        <li>
+          <div class="OptionWrapper"><h3 class="OptionTitle">Sherpa Desk</h3></div>
+          <div class="NoticationWrapper"><h2>9</h2></div>
+        </li>
+      </ul>
+    </div>
+    <div class="ActiveAccountsContainer">
+                <ul class="tableHeader">
+                <li></li>
+                <li>Hours</li>
+                <li>Invoice</li>
+                <li>Tickets</li>
+              </ul>
+              <ul class="tableRows">
+                <li>First..</li>
+                <li>6.5</li>
+                <li></li>
+                <li>3</li>
+              </ul>
+                <ul class="tableRows">
+                <li>NextQT</li>
+                <li></li>
+                <li></li>
+                <li>7</li>
+              </ul>
+               <ul class="tableRows">
+                <li>Pulsar</li>
+                <li></li>
+                <li>5.25</li>
+                <li>1</li>
+              </ul>
+                <ul class="tableRows">
+                <li>ACLU</li>
+                <li></li>
+                <li></li>
+                <li>5</li>
+              </ul>
+    </div>
+    <footer>
+      <ul class="bottomHeader clearfix">
+        <div class="bottomHeaderContainer">
+          <li><a href="add_tickets.html">+ Tickets</a></li>
+          <li>|</li>
+          <li><a href = "invoice.html">+ Invoice</a></li>
+          <li>|</li>
+          <li><a href = "add_time.html">+ Time</a></li>
+      </ul>
+    </footer>
+    </div>
+  </body>
+  </div>
+</html>
